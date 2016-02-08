@@ -13,7 +13,7 @@
         usr_fname = request.getParameter("usr_fname");
         usr_lname = request.getParameter("usr_lname");
         if(!(atdbook_name == null)){
-          atdbook_id = DigestUtils.md5Hex(atdbook_name);
+          atdbook_id = "atb" + DigestUtils.md5Hex(atdbook_name);
           usr_id = "usr" + DigestUtils.md5Hex(atdbook_name + usr_fname + usr_lname);
         }
 
