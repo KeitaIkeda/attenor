@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <title>attenor</title>
+    <script>
+        var atd_chk = function () {
+            if (!atd_fm.usr001.checked) {
+                atd_fm.usr001.value = "0";
+                atd_fm.usr001.checked = true;
+            }
+            if (!atd_fm.usr002.checked) {
+                atd_fm.usr002.value = "0";
+                atd_fm.usr002.checked = true;
+            }
+            atd_fm.submit();
+        }
+    </script>
 </head>
 
 <body>
-
-<form 
-
+    <form name="atd_fm">
+        <label>
+            <input type="checkbox" value="1" name="usr001">池田</label>
+        <label>
+            <input type="checkbox" value="1" name="usr002">松葉</label>
+        <input type="button" value="決定" onclick="atd_chk();">
+    </form>
 </body>
 
 </html>
